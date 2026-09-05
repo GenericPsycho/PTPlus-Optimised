@@ -2,8 +2,11 @@ if (vsp < 20)
 {
 	vsp += grav;
 }
-x += hsp;
-y += vsp;
+if (sprite_index != spr_bombexplosion)
+{
+	x += hsp;
+	y += vsp;
+}
 angle += (sign(hsp) * 10);
 if (scr_solid(x, y + 1))
 {

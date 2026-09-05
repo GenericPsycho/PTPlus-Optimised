@@ -9,6 +9,7 @@ if (state != states.boxxedpepspin)
 		if (other.state == states.normal && scr_transformationcheck() && !cutscene && state != states.bombgrab && (state == states.handstandjump || state == states.punch || state == states.lungeattack))
 		{
 			state = states.bombgrab;
+			movespeed = abs(movespeed);
 			image_index = 0;
 			sprite_index = spr_haulingstart;
 			other.defused = true;

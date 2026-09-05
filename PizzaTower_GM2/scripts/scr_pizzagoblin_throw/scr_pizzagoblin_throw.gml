@@ -59,6 +59,7 @@ function scr_pizzagoblin_throw()
 			case obj_noisegoblin:
 				if (sprite_index == spr_archergoblin_shoot)
 				{
+					fmod_event_one_shot_3d("event:/sfx/enemies/noisegoblinbow", x, y);
 					instance_create(x, y, obj_noisegoblin_arrow);
 				}
 				break;

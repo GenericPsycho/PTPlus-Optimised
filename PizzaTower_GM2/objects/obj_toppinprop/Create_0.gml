@@ -11,6 +11,10 @@ platformid = noone;
 idlespr = spr_toppincheese;
 movespr = spr_toppincheese_run;
 tauntspr = 300;
+respawn = false;
+topping_xstart = 0;
+topping_ystart = 0;
+canfall = false;
 depth = 1;
 while (scr_solid(x, y))
 {

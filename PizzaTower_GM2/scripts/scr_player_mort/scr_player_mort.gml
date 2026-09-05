@@ -40,7 +40,7 @@ function scr_player_mort()
 	{
 		image_speed = 0.35;
 	}
-	else if (abs(movespeed) > 3 && movespeed < 6)
+	else if (abs(movespeed) > 3 && abs(movespeed) < 6)
 	{
 		image_speed = 0.45;
 	}

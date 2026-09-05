@@ -2,6 +2,11 @@ function scr_player_backtohub()
 {
 	global.leveltorestart = noone;
 	global.noisejetpack = false;
+	if (room == tower_finalhallway && !global.exitrank)
+	{
+		global.leveltorestart = tower_finalhallway;
+		global.leveltosave = "exit";
+	}
 	hsp = 0;
 	movespeed = 0;
 	if (sprite_index != spr_rockethitwall)

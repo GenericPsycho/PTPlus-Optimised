@@ -24,7 +24,7 @@ with (obj_player1)
 		sprite_index = spr_mach4;
 		image_index = 0;
 	}
-	else if (tauntstoredstate == states.ratmount && tauntstoredratmount_movespeed >= 12 && !ispeppino)
+	else if ((tauntstoredstate == states.ratmount || tauntstoredstate == states.ratmountjump) && tauntstoredratmount_movespeed >= 12 && !ispeppino)
 	{
 		state = states.mach3;
 		movespeed = tauntstoredratmount_movespeed;

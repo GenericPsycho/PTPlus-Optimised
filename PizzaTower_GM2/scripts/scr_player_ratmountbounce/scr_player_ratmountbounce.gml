@@ -90,7 +90,7 @@ function scr_player_ratmountbounce()
 				landAnim = false;
 			}
 		}
-		if (grounded && vsp > 0 && !place_meeting(x, y + vsp, obj_destructibles) && !place_meeting(x, y + 15, obj_destructibles) && !place_meeting(x, y + 15, obj_metalblock) && !place_meeting(x, y + 15, obj_grindrail) && brick)
+		if (grounded && vsp > 0 && !place_meeting(x, y + vsp, obj_destructibles) && !place_meeting(x, y + 15, obj_destructibles) && !place_meeting(x, y + 15, obj_metalblock) && (!place_meeting(x, y + 15, obj_grindrail) || (place_meeting(x, y + 15, obj_grindrail) && place_meeting(x, y + 15, obj_solid))) && brick)
 		{
 			with (instance_create(x - 10, y, obj_parryeffect))
 			{

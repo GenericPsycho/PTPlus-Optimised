@@ -1,5 +1,7 @@
 var player = instance_nearest(x, y, obj_player);
 image_speed = 0.35;
+if !instance_exists(obj_frontcanongoblin)
+	state = states.normal;
 switch (state)
 {
 	case states.normal:

@@ -12,3 +12,4 @@ gotonoplayer = 0;
 finalhallway = false;
 group_arr = noone;
 offload_arr = noone;
+destroy = true;

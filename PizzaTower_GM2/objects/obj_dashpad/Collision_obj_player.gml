@@ -56,6 +56,7 @@ with (other)
 			state = states.mach3;
 			xscale = sign(other.image_xscale);
 			dir = xscale;
+			movespeed = abs(movespeed);
 			if (movespeed < 14)
 			{
 				movespeed = 14;

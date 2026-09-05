@@ -18,3 +18,9 @@ if ((room == tower_5 && targetRoom == tower_pizzafacehall) || room == tower_pizz
 {
 	sprite_index = spr_pizzafacedoor;
 }
+if instance_exists(obj_fadeout)
+	with (obj_fadeout)
+	{
+		if other.object_index == obj_pumpkindoor && global.levelreset && destroy
+			destroy = false;
+	}

@@ -85,7 +85,11 @@ function scr_playerreset(_stop_music = true)
 	instance_destroy(obj_pumpkincounter);
 	instance_destroy(obj_transfotip);
 	instance_destroy(obj_flushcount);
-	instance_destroy(obj_fadeout);
+	with(obj_fadeout)
+	{
+		if destroy
+			instance_destroy();
+	}
 	instance_destroy(obj_comboend);
 	instance_destroy(obj_combotitle);
 	instance_destroy(obj_confettieffect);
@@ -305,6 +309,7 @@ function scr_playerreset(_stop_music = true)
 		ds_list_clear(global.baddieroom);
 		with (obj_player)
 		{
+			image_speed = 0.35;
 			flash = false;
 			pistolcharge = 0;
 			pistolchargedelay = 5;

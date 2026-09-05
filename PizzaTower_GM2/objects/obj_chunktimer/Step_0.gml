@@ -20,9 +20,12 @@ if (global.fill <= 0 && global.panic == true && !global.tutorial_room && !instan
 			state = states.timesup;
 			sprite_index = spr_Timesup;
 			image_index = 0;
-			backtohubroom = tower_finalhallway;
-			backtohubstartx = 206;
-			backtohubstarty = 690;
+			if !global.exitrank
+			{
+				backtohubroom = tower_finalhallway;
+				backtohubstartx = 206;
+				backtohubstarty = 690;
+			}
 			if (isgustavo)
 			{
 				sprite_index = spr_player_ratmounttimesup;

@@ -60,7 +60,7 @@ function scr_player_noisecrusher()
 		create_particle(x, y, particletypes.jumpdust, 0);
 		return true;
 	}
-	if (grounded && vsp > 0 && !place_meeting(x, y + vsp, obj_destructibles) && !place_meeting(x, y + 15, obj_destructibles) && !place_meeting(x, y + 15, obj_metalblock) && !place_meeting(x, y + vsp + 5, obj_metalblock) && !place_meeting(x, y + 15, obj_grindrail))
+	if (grounded && vsp > 0 && !place_meeting(x, y + vsp, obj_destructibles) && !place_meeting(x, y + 15, obj_destructibles) && !place_meeting(x, y + 15, obj_metalblock) && !place_meeting(x, y + vsp + 5, obj_metalblock) && (!place_meeting(x, y + 15, obj_grindrail) || (place_meeting(x, y + 15, obj_grindrail) && place_meeting(x, y + 15, obj_solid))))
 	{
 		with (instance_create(x - 10, y, obj_parryeffect))
 		{

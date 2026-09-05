@@ -1,4 +1,3 @@
-
 draw_set_font(lang_get_font("bigfont"));
 draw_set_halign(fa_center);
 draw_set_color(c_white);
@@ -62,6 +61,10 @@ if (room != rm_blank)
 		if (!obj_player1.ispeppino || global.swapmode)
 		{
 			pal_swap_set(spr_tv_palette, 1, false);
+		}
+		if (obj_player1.ispeppino && !global.swapmode)
+		{
+			pal_swap_set(spr_tv_palette, 0, false);
 		}
 		draw_sprite(spr_tv_whitenoise, tv_trans, tv_x + collect_x, tv_y + collect_y + hud_posY);
 	}

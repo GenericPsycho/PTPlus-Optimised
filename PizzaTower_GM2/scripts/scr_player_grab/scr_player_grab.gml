@@ -218,7 +218,7 @@ function scr_player_grab()
 	{
 		sprite_index = spr_haulingidle;
 	}
-	if ((can_jump && input_buffer_jump > 0 && !key_down && !key_attack && vsp > 0) && sprite_index != spr_swingding)
+	if ((can_jump && input_buffer_jump > 0 && !key_down && vsp > 0) && sprite_index != spr_swingding)
 	{
 		input_buffer_jump = 0;
 		scr_fmod_soundeffect(jumpsnd, x, y);

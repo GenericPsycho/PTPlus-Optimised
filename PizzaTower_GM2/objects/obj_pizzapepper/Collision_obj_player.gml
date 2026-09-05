@@ -12,6 +12,12 @@ if (visible == true)
 		}
 	}
 	timetovisible = 100;
+	with (other)
+	{
+		if (state == states.machcancel)
+			xscale = savedmove;
+		movespeed = abs(movespeed);
+	}
 	if (other.ispeppino)
 	{
 		with (other)

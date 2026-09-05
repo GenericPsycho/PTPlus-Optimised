@@ -45,6 +45,7 @@ switch (room)
 	case freezer_secret1:
 		global.noisejetpack = true;
 		break;
+	case freezer_secret2:
 	case freezer_secret3:
 		if (!obj_player1.ispeppino)
 		{

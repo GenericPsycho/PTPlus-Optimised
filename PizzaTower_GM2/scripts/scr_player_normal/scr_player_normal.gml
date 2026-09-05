@@ -288,11 +288,14 @@ function state_player_normal()
 			else
 			{
 				windingAnim = 0;
-				sprite_index = spr_facehurt;
+				if (sprite_index == spr_facehurtup && floor(image_index) == (image_number - 1)) 
+					sprite_index = spr_facehurt;
 				if (breakdance_pressed >= breakdance_max)
 				{
 					sprite_index = spr_breakdance;
 				}
+				if (ANIMATION_END && sprite_index == spr_player_poundcancel3)
+					sprite_index = spr_idle;
 			}
 		}
 	}
@@ -512,7 +515,7 @@ function state_player_normal()
 	switch (character)
 	{
 		case "P":
-			if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu)
+			if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && !scr_solid_slope(x + xscale, y) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu)
 			{
 				if (!global.pistol || pistolanim == noone)
 				{

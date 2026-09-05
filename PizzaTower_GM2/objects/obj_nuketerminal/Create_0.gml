@@ -1,3 +1,4 @@
+image_speed = 0.35;
 hp = 2;
 depth = 1;
 minutes = 0;

@@ -17,8 +17,12 @@ function scr_player_freefallland()
 	hsp = 0;
 	if (ANIMATION_END)
 	{
+		
 		facehurt = true;
-		sprite_index = spr_facehurtup;
+		if (sprite_index != spr_player_poundcancel2)
+			sprite_index = spr_facehurtup;
+		else
+			sprite_index = spr_player_poundcancel3;
 		image_index = 0;
 		state = states.normal;
 		jumpstop = true;

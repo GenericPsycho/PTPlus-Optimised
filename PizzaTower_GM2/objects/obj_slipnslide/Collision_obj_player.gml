@@ -7,7 +7,7 @@ with (other)
 		sprite_index = spr_slipbanan1;
 		other.drop = true;
 		vsp = -11;
-		if (state == states.machcancel)
+		if (state == states.machcancel || state == states.punch)
 		{
 			if (movespeed != 0)
 			{

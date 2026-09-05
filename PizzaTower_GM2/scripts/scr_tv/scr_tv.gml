@@ -275,6 +275,9 @@ function scr_tv_get_transfo_sprite()
 		case states.freefallprep:
 		case states.freefall:
 		case states.freefallland:
+		case states.machcancelstart:
+		case states.machcancel:
+		case states.noisecrusher:
 			if (obj_player1.shotgunAnim)
 			{
 				_spr = spr_tv_shotgun;

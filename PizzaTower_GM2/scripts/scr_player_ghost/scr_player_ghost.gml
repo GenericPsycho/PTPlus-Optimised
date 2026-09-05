@@ -60,7 +60,10 @@ function scr_player_ghost()
 	{
 		move_v = key_down - key_up;
 	}
-	image_alpha = 1;
+	if (place_meeting(x, y, obj_ghosttransparency))
+		image_alpha = 1;
+	else
+		image_alpha = 0.5;
 	visible = true;
 	alarm[5] = -1;
 	alarm[6] = -1;

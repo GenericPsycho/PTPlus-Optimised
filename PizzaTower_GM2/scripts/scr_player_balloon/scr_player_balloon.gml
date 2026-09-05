@@ -99,6 +99,15 @@ function scr_player_balloon()
 	move = key_left + key_right;
 	vsp = -5;
 	image_speed = 0.35;
+	with (obj_player)
+	{
+		ghostdash = false;
+		ghostdashbuffer = 0;
+		ghostpepper = 0;
+		ghosteffect = 0;
+		ghostbump = 1;
+		ghostbumpbuffer = -1;
+	}
 	if (move != 0)
 	{
 		movespeed = Approach(movespeed, move * 6, 0.35);

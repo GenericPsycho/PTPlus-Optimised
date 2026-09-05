@@ -362,6 +362,7 @@ function scr_player_supergrab()
 							var dir = point_direction(x, y, targetx, targety);
 							hspeed = lengthdir_x(spd, dir);
 							vspeed = lengthdir_y(spd, dir);
+							noiseID = other.id;
 						}
 						if (subhpshot > 0)
 						{

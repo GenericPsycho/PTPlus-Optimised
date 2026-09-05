@@ -104,7 +104,7 @@ function scr_enemy_stun()
 			thrown = false;
 		}
 	}
-	if (hithsp != 0 && place_meeting(x + hithsp, y, obj_solid) && !place_meeting(x + hithsp, y, obj_destructibles))
+	if (hithsp != 0 && (place_meeting(x + hithsp, y, obj_solid) || scr_solid_slope(x + hithsp, y)) && !place_meeting(x + hithsp, y, obj_destructibles))
 	{
 		if (thrown == true)
 		{

@@ -4,3 +4,4 @@ targetx = 0;
 targety = 0;
 depth = -30;
 alarm[0] = 1;
+noiseID = noone;

@@ -57,6 +57,7 @@ function scr_player_grind()
 		}
 		vsp = -11;
 		jumpstop = false;
+		image_index = 0;
 		if (skateboarding)
 		{
 			sprite_index = spr_clownjump;

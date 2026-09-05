@@ -97,6 +97,10 @@ for (var i = 0; i < array_length(_toppinspr); i++)
 			{
 				y -= 2;
 			}
+			topping_xstart = x;
+			topping_ystart = y;
+			if (other.level == "saloon")
+				canfall = true;
 		}
 	}
 }

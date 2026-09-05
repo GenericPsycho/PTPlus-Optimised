@@ -5,6 +5,8 @@ if (active)
 		if (other.isgustavo && other.brick)
 		{
 			fmod_event_one_shot_3d("event:/sfx/rat/grabeat", x, y);
+			if (other-sprite_index == other.spr_fightball)
+				other.movespeed *= other.xscale;
 			other.state = states.ratmountballoon;
 			active = false;
 			cooldown = 100;

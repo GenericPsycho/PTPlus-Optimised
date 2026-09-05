@@ -20,6 +20,7 @@ with (other)
 		}
 		sprite_index = spr_rocketstart;
 		image_index = 0;
+		movespeed = abs(movespeed);
 		if (movespeed < 8)
 		{
 			movespeed = 8;

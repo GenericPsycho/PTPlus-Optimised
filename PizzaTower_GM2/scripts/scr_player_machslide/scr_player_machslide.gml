@@ -48,7 +48,7 @@ function scr_player_machslide()
 		}
 		movespeed = 0;
 	}
-	if (place_meeting(x + xscale, y, obj_solid) && (sprite_index == spr_machslide || sprite_index == spr_machslidestart))
+	if ((place_meeting(x + xscale, y, obj_solid) || scr_solid_slope(x + sign(hsp), y)) && (sprite_index == spr_machslide || sprite_index == spr_machslidestart))
 	{
 		fmod_event_one_shot_3d("event:/sfx/pep/splat", x, y);
 		sprite_index = spr_wallsplat;

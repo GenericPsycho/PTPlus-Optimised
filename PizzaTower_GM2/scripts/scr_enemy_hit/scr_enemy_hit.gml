@@ -36,7 +36,7 @@ function scr_enemy_hit()
 			thrown = true;
 			override_throw = false;
 		}
-		else if (_state == states.mach2 || _state == states.tumble || (_state == states.machslide && obj_player.sprite_index != obj_player.spr_mach3boost && obj_player.sprite_index != spr_player_machslideboost3fall) || sprite_index == spr_player_ratmountattack || sprite_index == spr_lonegustavo_dash)
+		else if (_state == states.mach2 || _state == states.tumble || (_state == states.machslide && obj_player.sprite_index != obj_player.spr_mach3boost && obj_player.sprite_index != obj_player.spr_mach3boostfall) || sprite_index == spr_player_ratmountattack || sprite_index == spr_lonegustavo_dash)
 		{
 			thrown = false;
 		}
