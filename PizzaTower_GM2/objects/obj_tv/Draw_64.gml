@@ -67,6 +67,8 @@ if (room != rm_blank)
 			pal_swap_set(spr_tv_palette, 0, false);
 		}
 		draw_sprite(spr_tv_whitenoise, tv_trans, tv_x + collect_x, tv_y + collect_y + hud_posY);
+		if obj_player1.ispeppino && !global.chateauswap
+			pal_swap_set(spr_tv_palette, 0, false);
 	}
 	if (sprite_index == spr_tv_exprheatN)
 	{
